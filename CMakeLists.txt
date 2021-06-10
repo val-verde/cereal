@@ -45,8 +45,8 @@ else()
     if(APPLE OR CLANG_USE_LIBCPP)
         message(STATUS "Use libc++")
         add_compile_options(-stdlib=libc++)
-        # TODO: use add_link_options(-stdlib=libc++ -lc++abi") bud this needs cmake 3.13! CK
-        set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -stdlib=libc++ -lc++abi")
+        # TODO: use add_link_options(-stdlib=libc++") bud this needs cmake 3.13! CK
+        set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -stdlib=libc++")
     endif()
 
     if(NOT DEFINED CMAKE_CXX_STANDARD OR CMAKE_CXX_STANDARD STREQUAL "98")
